@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d11u1qfmnhc61"]
+
+[ext_resource type="Script" uid="uid://bh2cts6d4e0j7" path="res://terminal.gd" id="1_2k3l4"]
+[ext_resource type="FontFile" uid="uid://cp8gtvx6gd1c5" path="res://singletons/fonts/JetBrainsMono-Regular.ttf" id="2_7d6gb"]
+
+[node name="Terminal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2k3l4")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TerminalText" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_7d6gb")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+scroll_following = true
