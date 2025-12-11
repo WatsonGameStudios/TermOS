@@ -186,6 +186,7 @@ func register_commands() -> void:
 	commands["mkdir"] = cmd_mkdir
 	commands["rmdir"] = cmd_rmdir
 	commands["pwd"] = cmd_pwd
+	commands["launch_ose"] = cmd_launch_ose
 
 
 func _process(delta: float) -> void:
@@ -1077,3 +1078,15 @@ func handle_enter() -> void:
 	current_input = ""
 	history_index = -1
 	update_display()
+
+func cmd_launch_ose(arg):
+	if arg.size() < 1:
+		print_line("Available OSE's: ")
+		print_line("")
+		print_line("")
+		print_line("WatsonOSE")
+		print_line("")
+	elif arg[0] == "WatsonOSE":
+		get_tree().change_scene_to_file("res://OSE's/WatsonOSE/WatsonOSE.tscn")
+	
+		
