@@ -187,6 +187,7 @@ func register_commands() -> void:
 	commands["rmdir"] = cmd_rmdir
 	commands["pwd"] = cmd_pwd
 	commands["launch_ose"] = cmd_launch_ose
+	commands["kill"] = cmd_kill
 
 
 func _process(delta: float) -> void:
@@ -1086,7 +1087,13 @@ func cmd_launch_ose(arg):
 		print_line("")
 		print_line("WatsonOSE")
 		print_line("")
+		print_line("GodotOS")
+		print_line("")
+		print_line("TempleOS")
+		print_line("")
 	elif arg[0] == "WatsonOSE":
 		get_tree().change_scene_to_file("res://OSE's/WatsonOSE/WatsonOSE.tscn")
 	
 		
+func cmd_kill(_arg):
+	get_tree().quit()
